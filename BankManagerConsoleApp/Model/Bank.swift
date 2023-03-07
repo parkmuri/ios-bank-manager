@@ -6,5 +6,18 @@
 //
 
 struct Bank {
+    var bankManager: BankManager
+    var clientList: Queue<Int>
+  
+    mutating func lineUpClient() {
+        let client = Client()
+
+        for number in 1...client.number {
+            clientList.enqueue(number)
+        }
+    }
     
+    mutating func allocateClient(to bankManager: BankManager) {
+        
+    }
 }

@@ -6,13 +6,5 @@
 //
 
 struct Client {
-    var clientList: Queue<Int>
-    
-    mutating func lineUpClient() {
-        let numberOfClient: Int = Int.random(in: 10...30)
-        
-        for number in 1...numberOfClient {
-            clientList.enqueue(number)
-        }
-    }
+    var number: Int = Int.random(in: 10...30)
 }
