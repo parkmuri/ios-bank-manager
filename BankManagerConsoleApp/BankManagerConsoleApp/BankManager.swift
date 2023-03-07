@@ -9,7 +9,7 @@ struct BankManager {
     
     mutating private func openBank() {
         bank.lineUpClient()
-        bank.serviceToClient()
+        bank.doTask()
         startBankApp()
     }
     
