@@ -5,8 +5,10 @@
 //
 
 struct BankManager {
-//    let bank = Bank
-//    func work() {
-//        bank.clientList.dequeue()
-//    }
+    var bank = Bank()
+    
+    mutating func openBank() {
+        bank.lineUpClient()
+        bank.serviceToClient()
+    }
 }
