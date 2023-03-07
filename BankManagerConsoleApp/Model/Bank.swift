@@ -8,8 +8,8 @@
 import Foundation
 
 struct Bank {
-    var waitingLine = Queue<Int>()
-    
+    private var waitingLine = Queue<Int>()
+
     mutating func lineUpClient() {
         let client = Client()
         print(client.number)
@@ -31,9 +31,10 @@ struct Bank {
             usleep(700000)
             print(end)
         }
-
+        
         let timeOfTask = CFAbsoluteTimeGetCurrent() - startTime
-        let success = "업무가 마감되었습니다. 오늘 업무를 처리한 고객은 총 \(waitingLine.count)명이며, 총 업무시간은 \(timeOfTask)초입니다."
+        let totalTime = String(format: "%.2f", floor(timeOfTask))
+        let success = "업무가 마감되었습니다. 오늘 업무를 처리한 고객은 총 \(waitingLine.count)명이며, 총 업무시간은 \(totalTime)초입니다."
         print(success)
     }
 }

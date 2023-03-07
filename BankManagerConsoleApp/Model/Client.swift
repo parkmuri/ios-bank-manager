@@ -6,5 +6,5 @@
 //
 
 struct Client {
-    var number: Int = Int.random(in: 10...30)
+    private(set) var number: Int = Int.random(in: 10...30)
 }

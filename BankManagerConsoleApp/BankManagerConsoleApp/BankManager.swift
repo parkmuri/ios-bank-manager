@@ -5,11 +5,12 @@
 //
 
 struct BankManager {
-    var bank = Bank()
+    private var bank = Bank()
     
-    mutating func openBank() {
+    mutating private func openBank() {
         bank.lineUpClient()
         bank.serviceToClient()
+        startBankApp()
     }
     
     mutating func startBankApp() {
@@ -29,6 +30,7 @@ struct BankManager {
             return
         default:
             print(inputError)
+            startBankApp()
         }
     }
 }
