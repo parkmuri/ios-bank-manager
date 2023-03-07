@@ -83,8 +83,8 @@
 				FB97FCE029B5E347001F18B3 /* .swiftlint.yml */,
 				FB97FCDE29B5E282001F18B3 /* Model */,
 				C7694E78259C3EC00053667F /* BankManagerConsoleApp */,
-				FB580D8129B5DF11003E95B5 /* LinkedListTest */,
 				FB97FCE629B5FA05001F18B3 /* QueueTest */,
+				FB580D8129B5DF11003E95B5 /* LinkedListTest */,
 				C7694E77259C3EC00053667F /* Products */,
 			);
 			sourceTree = "<group>";

@@ -8,28 +8,32 @@
 import Foundation
 
 struct Bank {
-    var clientList = Queue<Int>()
+    var waitingLine = Queue<Int>()
     
     mutating func lineUpClient() {
         let client = Client()
         print(client.number)
         
         for number in 1...client.number {
-            clientList.enqueue(number)
+            waitingLine.enqueue(number)
         }
     }
-
+    
     mutating func serviceToClient() {
-        let checkTime = CFAbsoluteTimeGetCurrent()
+        let startTime = CFAbsoluteTimeGetCurrent()
 
-        for _ in 1...clientList.count {
-            guard let now = clientList.dequeue() else { return }
-            print("\(now)번째 고객 업무 처리 시작")
+        for _ in 1...waitingLine.count {
+            guard let now = waitingLine.dequeue() else { return }
+            let start = "\(now)번 고객 업무 시작"
+            let end = "\(now)번 고객 업무 완료"
+            
+            print(start)
             usleep(700000)
-            print("\(now)번째 고객 업무 처리 종료")
+            print(end)
         }
 
-        let timeOfTask = CFAbsoluteTimeGetCurrent() - checkTime
-        print("업무수행시 걸린 시간 \(timeOfTask)초")
+        let timeOfTask = CFAbsoluteTimeGetCurrent() - startTime
+        let success = "업무가 마감되었습니다. 오늘 업무를 처리한 고객은 총 \(waitingLine.count)명이며, 총 업무시간은 \(timeOfTask)초입니다."
+        print(success)
     }
 }
