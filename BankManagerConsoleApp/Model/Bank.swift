@@ -2,7 +2,9 @@
 //  Bank.swift
 //  BankManagerConsoleApp
 //
-//  Created by 박소연 on 2023/03/07.
+//  Created by 리지, 무리 on 2023/03/07.
 //
 
-import Foundation
+struct Bank {
+    
+}
