@@ -38,8 +38,7 @@
 
 # 프로젝트 구조
 
-<img src="https://i.imgur.com/B46wnSr.png" width="1500">
-
+<img src="https://user-images.githubusercontent.com/115514179/225814863-65fe5a2f-b1ea-4083-ac7b-239231a77ef2.png" width="1500">
 
 <br/>
 
